@@ -11,8 +11,29 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
 
 </head>
+    
+<script>
+    const video = document.getElementById("videoAbertura");
+    const botaoSom = document.getElementById("btnSom");
 
-<body>
+    botaoSom.addEventListener("click", async () => {
+        video.muted = !video.muted;
+        video.volume = 1;
+
+        if (!video.muted) {
+            try {
+                await video.play();
+                botaoSom.textContent = "🔇";
+            } catch (erro) {
+                console.log("O navegador bloqueou o áudio:", erro);
+            }
+        } else {
+            botaoSom.textContent = "🔊";
+        }
+    });
+</script>
+
+</body>
 
 <header class="hero">
 
@@ -24,10 +45,22 @@
 
     <div class="conteudo">
         <img src="png.jpeg" alt="Logo KVOX" class="logo">
+
+        <p class="frase-hero">
+            Muito mais que música.
+        </p>
     </div>
 
-</header>
-    <section class="apresentacao">
+    <button id="btnSom" class="botao-som" type="button" aria-label="Ativar ou desativar som">
+        🔊
+    </button>
+
+    <div class="indicador-rolagem">
+        <span>Descubra a experiência</span>
+        <span class="seta">↓</span>
+    </div>
+
+</header>    <section class="apresentacao">
     <p class="etiqueta">KVOX</p>
 
     <h2>Muito mais que música.</h2>
