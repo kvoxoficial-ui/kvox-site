@@ -89,6 +89,15 @@ Baixar Media Kit
 ©️ 2026 KVOX Oficial
 
 </footer>
+<script>
+const video = document.getElementById("videoAbertura");
+const botao = document.getElementById("btnSom");
 
+botao.addEventListener("click", () => {
+    video.muted = false;
+    video.play();
+    botao.style.display = "none";
+});
+</script>
 </body>
 </html>
