@@ -1,147 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 
-<title>KVOX Oficial</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-<link rel="stylesheet" href="style.css">
+    <title>KVOX Oficial</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="style.css">
 </head>
-    
-<script>
-    const video = document.getElementById("videoAbertura");
-    const botaoSom = document.getElementById("btnSom");
 
-    botaoSom.addEventListener("click", async () => {
-        video.muted = !video.muted;
-        video.volume = 1;
+<body>
 
-        if (!video.muted) {
-            try {
-                await video.play();
-                botaoSom.textContent = "🔇";
-            } catch (erro) {
-                console.log("O navegador bloqueou o áudio:", erro);
-            }
-        } else {
-            botaoSom.textContent = "🔊";
-        }
-    });
-</script>
+    <header class="hero">
 
-<header class="hero">
+        <video
+            id="videoAbertura"
+            class="video-fundo"
+            autoplay
+            muted
+            loop
+            playsinline
+        >
+            <source src="VIDEO.mp4" type="video/mp4">
+        </video>
 
-    <video id="videoAbertura" autoplay muted loop playsinline class="video-fundo">
-        <source src="VIDEO.mp4" type="video/mp4">
-    </video>
+        <div class="overlay"></div>
 
-    <div class="overlay"></div>
+        <div class="conteudo">
+            <img
+                src="png.jpeg"
+                alt="Logo KVOX"
+                class="logo"
+            >
 
-    <div class="conteudo">
-       
-        <p class="frase-hero">Muito mais que música.</p>
-    </div>
+            <p class="frase-hero">
+                Muito mais que música.
+            </p>
+        </div>
 
-    <button id="btnSom" class="botao-som" type="button">
-        🔊
-    </button>
-
-
-  
-        <span>Descubra a experiência</span>
-        <span class="seta">↓</span>
-    </div>
-
-</header>
-
-
-    <h2>Muito mais que música.</h2>
-
-    <p>
-        Arquitetura de experiências musicais para casamentos,
-        eventos corporativos e celebrações inesquecíveis.
-    </p>
-</section>
-
-
-</div>
-
-
-<p>Arquitetura de experiências musicais para casamentos, eventos corporativos e celebrações inesquecíveis.
-
-Transformamos momentos importantes em experiências memoráveis através de planejamento estratégico, direção artística e música ao vivo.</p>
-
-<a class="botao" href="https://wa.me/5548999378003" target="_blank">
-
-Solicitar orçamento
-
-</a>
-
-</header>
-
-<section>
-
-<h2>Sobre</h2>
-
-<p>
-
-Ajudamos pessoas e empresas que desejam realizar eventos memoráveis a transformar suas celebrações em experiências que conectam pessoas, despertam emoções e permanecem na memória através de planejamento estratégico, direção artística e condução musical personalizada.
-Mais do que apresentações musicais, entregamos tranquilidade para quem organiza e experiências que fazem sentido para cada momento do evento.
-
-
-</p>
-
-</section>
-
-<section>
-
-<section class="media-kit">
-    <p class="etiqueta">APRESENTAÇÃO PROFISSIONAL</p>
-
-    <h2>Media Kit</h2>
-
-    <p class="media-kit-texto">
-        Conheça a trajetória, os formatos de apresentação,
-        a estrutura e os diferenciais da experiência KVOX.
-    </p>
-
-    <a class="botao botao-dourado" href="media-kit-kvox.pdf" target="_blank">
-        Baixar Media Kit
-    </a>
-</section>
-
-<section class="redes">
-    <p class="etiqueta">ACOMPANHE NOSSO TRABALHO</p>
-
-    <h2>Siga a KVOX</h2>
-
-    <p>
-        Bastidores, apresentações e experiências que transformam eventos.
-    </p>
-
-    <a class="botao" href="https://instagram.com/kvoxoficial" target="_blank">
-        Instagram · @kvoxoficial
-    </a>
-</section>
-
-<footer>
-
-©️ 2026 KVOX Oficial
-
-</footer>
-<script>
-const video = document.getElementById("videoAbertura");
-const botao = document.getElementById("btnSom");
-
-botao.addEventListener("click", () => {
-    video.muted = false;
-    video.play();
-    botao.style.display = "none";
-});
-</script>
-</body>
-</html>
+        <button
