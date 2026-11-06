@@ -577,3 +577,6 @@ h3 {
         max-width: 330px;
     }
 }
+
+
+@media (max-width: 768px) { .logo { width: 60vw; max-width: 240px; height: auto; } }.
