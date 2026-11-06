@@ -44,7 +44,7 @@ transform: translate(-50%, -50%);
     width: 90%;
     height: 90%;
 
-    object-fit: cover;
+    object-fit: contain;
     z-index: 0;
 }
 
